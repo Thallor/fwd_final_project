@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+  <script defer src="calculator-script.js"></script>
+  <title>Cryptocurrency yield platforms</title>
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <label class="navbar-toggle" id="js-navbar-toggle" for="chkToggle">
+            <i class="fa fa-bars"></i>
+        </label>
+    <a href="#" class="logo">logo</a>
+    <input type="checkbox" id="chkToggle"></input>
+    <ul class="main-nav" id="js-menu">
+      <li>
+        <a href="#" class="nav-links">Best Exchanges</a>
+      </li>
+      <li>
+        <a href="#" class="nav-links">Earn Yield</a>
+      </li>
+      <li>
+        <a href="#" class="nav-links">Reviews</a>
+      </li>
+      <li>
+        <a href="#" class="nav-links">News</a>
+      </li>
+      <li>
+        <a href="#" class="nav-links">Connect Wallet</a>
+      </li>
+    </ul>
+  </nav>
+  
+
+  <div class="masthead">
+    <div class="masthead-content">
+      <h1>Compare crypto yield and lending platforms</h1>
+      <h2>Earn rewards on your crypto via staking, lending or loyalty programmes with these leading exchanges</h2>
+    </div>
+    <aside class="masthead-sidebar-left">
+      <div class="masthead-ad-container-left"></div>
+    </aside>
+    <aside class="masthead-sidebar-right">
+      <div class="masthead-ad-container-right"></div>
+    </aside>
+  </div>
+</header>
+
+  <main class="main-grid">
+    <nav class="left-sidebar">
+      <h5>What's in this guide</h5>
+      <ul>
+        <li><a href="#anchor-name">1. Overview</a></li>
+        <hr>
+        <li><a href="#calculator-anchor"> 2. Yield calculator</a></li>
+        <hr>
+        <li><a href="#binance-anchor"> 3. Binance review</a></li>
+        <hr>
+        <li><a href="#kraken-anchor"> 4. Kraken review</a></li>
+        <hr>
+        <li><a href="#crypto-anchor"> 5. Crypto.com review</a></li>
+        <hr>
+        <li><a href="#staking-anchor"> 6. What is a crypto staking platform?</a></li>
+        <hr>
+        <li><a href="#defi-anchor"> 7. What is a DeFi platform?</a></li>
+        <hr>
+        <li><a href="#risks-anchor"> 8. Risks of earning yield</a></li>
+        <hr>
+        <li><a href="#verdict-anchor"> 8. Verdict</a></li>
+      </ul>
+    </nav>
+  
+  <!--Body starts-->
+
+    <section class="content">
+      <p>Each year, we conduct a comprehensive review of crypto staking and rewards platforms in Australia. To arrive at these picks, we've compared more than 30 platforms on things like annual percentage yield (APY), how yield is generated, user experience, range of assets and risk mitigation tools.
+        Before you begin, it's important to understand that crypto platforms generate yield in several different ways, each with different levels of risk attached. Our picks include products that can help you earn crypto with staking, lending and decentralized finance (DeFi).</p>
+      <br>
+      <p>Use the calculator below the calculate your potential interest with one of the providers listed, or read on for a more in-depth review of each as well as the pros and cons of each service, as well of some of the risks invovled with earning yield on crypto assets. Ut id nisl in nisi suscipit bibendum vel et est. Duis fringilla eget nisl nec pretium.</p>
+
+  <!--Calculator-->
+
+  <div class="calculator">
+    <h3 id="calculator-anchor">Interest Calculator</h3>
+  
+    <label for="exchange">Exchange:</label>
+    <select id="exchange" onchange="displayInterestRate()">
+      <option value="Binance">Binance</option>
+      <option value="Kraken">Kraken</option>
+      <option value="Gemini">Gemini</option>
+      <option value="Crypto.com">Crypto.com</option>
+      <option value="Coinbase">Coinbase</option>
+    </select>
+    <br>
+    
+  
+  
+    <br>
+    <label for="currency">Currency:</label>
+    <select id="currency" onchange="displayInterestRate()">
+    <option value="USD">USD</option>
+    <option value="AUD">AUD</option>
+    <option value="GBP">GBP</option>
+    <option value="EUR">EUR</option>
+    <option value="JPY">JPY</option>
+  </select>
+  <span id="displayedInterestRate"></span>
+  <br>
+  
+    </select>
+    <br>
+    <label for="amount">Amount:</label>
+    <input type="number" id="amount" min="0">
+    <br>
+    <button onclick="calculateInterest()">Calculate</button>
+    <p id="interestRate"></p>
+    <p id="yearlyInterest"></p>
+  </div>
+
+  <!--Review boxes-->
+
+  <div class="review-box">
+    <div class="box-header">
+      <img src="assets/binance-logo.svg" alt="Product Logo" class="logo">
+      <h3 id="binance-anchor">Binance</h3>
+      <div class="buttons">
+        <button class="go-to-site">Go to site</button>
+        <button class="read-review">Read review</button>
+      </div>
+    </div>
+    <div class="box-body">
+      <ul>
+        <li><img src="assets/green-tick-icon.svg" alt="Image of a green tick" class="green-tick"> The option to choose between short- and long-term lock-up periods makes Binance our top pick for flexible staking.</li>
+        <li><img src="assets/green-tick-icon.svg" alt="Image of a green tick" class="green-tick"> Binance supports staking on 100+ cryptocurrencies and offers attractive APRs of up to 12% on some tokens. </li>
+        <li><img src="assets/green-tick-icon.svg" alt="Image of a green tick" class="green-tick"> Staking durations range from 7-120 days and require low minimum token balances to start earning.</li>
+        <li><img src="assets/warning-icon.svg" alt="Image of a green tick" class="warning-icon"> Keep in mind that staking durations differ between tokens and pools can sell out at Binance's discretion.</li>
+        <li><img src="assets/red-cross-icon.svg" alt="Image of a red cross" class="red-cross"> Early redemption will result in the APR accrued being deducted from your initial investment.</li>
+        <li><img src="assets/red-cross-icon.svg" alt="Image of a red cross" class="red-cross"> Binance is not liable for losses incurred in DeFi staking pools. </li>
+      </ul>
+    </div>
+    <div class="accordion-container">
+      <div class="accordion">
+        <div class="accordion-label"><h4>Pros and cons</h4><span class="plus">+</span></div>
+        <div class="accordion-content">
+          <div class="pros-and-cons">
+            <div class="pros">
+              
+              <ul>
+                <li><img src="assets/green-tick-icon.svg" alt="Image of a green tick" class="green-tick"> 100+ coins and tokens supported.</li>
+                <li><img src="assets/green-tick-icon.svg" alt="Image of a green tick" class="green-tick"> DeFi staking supported.</li>
+                <li><img src="assets/green-tick-icon.svg" alt="Image of a green tick" class="green-tick"> Lock-up durations of 7-120 days.</li>
+              </ul>
+            </div>
+            <div class="cons">
+              <ul>
+                <li><img src="assets/red-cross-icon.svg" alt="Image of a red cross" class="red-cross"></span> Early redemption results in a loss of yield accrued.</li>
+                <li><img src="assets/red-cross-icon.svg" alt="Image of a red cross" class="red-cross"></span> Staking pools can sell out.</li>
+                <li><img src="assets/red-cross-icon.svg" alt="Image of a red cross" class="red-cross"></span> Binance is not liable for losses incurred in DeFi staking pools.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion">
+        <div class="accordion-label"><h4>Hands-on review</h4><span class="plus">+</span></div>
+        <div class="accordion-content">
+          <p>I use Binance for the bulk of my cryptocurrency investing because it has an insane amount of features and a solid range of coins. I like that once I've bought a coin there are various earning options available, so I don't need to move my funds to another exchange. 
+            But I find that the earning interface can be quite confusing, even for me, an experienced investor. I also wonder how new users go with navigating the website, as now it's so feature-rich that it's become quite cluttered and difficult to navigate at times. 
+            Apparently the app has a 'lite mode' for new users, so that might be worth checking out if you're a beginner.  – James Edwards, Cryptocurrency Editor. </p>
+        </div>
+      </div>
+      <div class="accordion">
+        <div class="accordion-label"><h4>Fees and limits</h4><span class="plus">+</span></div>
+        <div class="accordion-content">
+          <table>
+            <tr>
+              <td><b>Deposit fees</b></td>
+              <td>Bank transfer: None<br> Credit card: $3.40<br> Debit card: $3.40</td>
+            </tr>
+            <tr>
+              <td><b>Withdrawal fees</b></td>
+              <td>None</td>
+            </tr>
+            <tr>
+              <td><b>Trading fees</b></td>
+              <td>Maker: 0.40%<br>Taker: 0.40%<br>Instant buy: 3.5%</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="review-box">
+    <div class="box-header">
+      <img src="assets/kraken-logo.svg" alt="Product Logo" class="logo">
+      <h3 id="kraken-anchor">Kraken</h3>
+      <div class="buttons">
+        <button class="go-to-site">Go to site</button>
+        <button class="read-review">Read review</button>
+      </div>
+    </div>
+    <div class="box-body">
+      <ul>
+        <li><img src="assets/green-tick-icon.svg" alt="Image of a green tick" class="green-tick"> Kraken differs from many other staking platforms in that it mainly supports on-chain staking to generate yield. On-chain staking utilizes the blockchain’s proof-of-stake consensus mechanism. 
+          By locking up eligible cryptos, node operators are helping to secure the network and in turn are rewarded when new blocks are generated. This substantially reduces the counterparty risk when compared with other yield-generating products like lending or DeFi.</li>
+        <li><img src="assets/green-tick-icon.svg" alt="Image of a green tick" class="green-tick"> Kraken currently supports on-chain staking for 12 cryptos and offers returns between 4% and 18% which makes it our top pick in this category.</li>
+        <li><img src="assets/green-tick-icon.svg" alt="Image of a green tick" class="green-tick"> Launched in 2013, Kraken is one of the oldest cryptocurrency exchanges and has a strong focus on high-end security and legal compliance.</li>
+        <li><img src="assets/warning-icon.svg" alt="Image of a green tick" class="warning-icon"> Kraken was fined in the US by the SEC for its staking programme. As a result, it no longer serves US customers.</li>
+        <li><img src="assets/warning-icon.svg" alt="Image of a green tick" class="warning-icon"> Kraken only offers on-chain staking, which is considered less risky than lending or DeFi but also means it offers a much smaller range of coins for earning than many competitors.</li>
+      </ul>
+    </div>
+    <div class="accordion-container">
+      <div class="accordion">
+        <div class="accordion-label"><h4>Pros and cons</h4><span class="plus">+</span></div>
+        <div class="accordion-content">
+          <div class="pros-and-cons">
+            <div class="pros">
+              
+              <ul>
+                <li><img src="assets/green-tick-icon.svg" alt="Image of a green tick" class="green-tick"> Lorem ipsum dolor sit amet.</li>
+                <li><img src="assets/green-tick-icon.svg" alt="Image of a green tick" class="green-tick"> Lorem ipsum dolor sit amet.</li>
+                <li><img src="assets/green-tick-icon.svg" alt="Image of a green tick" class="green-tick"> Lorem ipsum dolor sit amet.</li>
+              </ul>
+            </div>
+            <div class="cons">
+              <ul>
+                <li><img src="assets/red-cross-icon.svg" alt="Image of a red cross" class="red-cross"></span> Lorem ipsum dolor sit amet.</li>
+                <li><img src="assets/red-cross-icon.svg" alt="Image of a red cross" class="red-cross"></span> Lorem ipsum dolor sit amet.</li>
+                <li><img src="assets/red-cross-icon.svg" alt="Image of a red cross" class="red-cross"></span> Lorem ipsum dolor sit amet.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion">
+        <div class="accordion-label"><h4>Hands-on review</h4><span class="plus">+</span></div>
+        <div class="accordion-content">
+          <p>I honestly expected a bit more from Kraken's website. I'm a big fan of their profession trading features and the Pro interface, but when I want to do some simple trades it feels overly complicated.</p>
+        </div>
+      </div>
+      <div class="accordion">
+        <div class="accordion-label"><h4>Fees and limits</h4><span class="plus">+</span></div>
+        <div class="accordion-content">
+          <table>
+            <tr>
+              <td><b>Deposit fees</b></td>
+              <td>Bank transfer: None<br> Credit card: $3.40<br> Debit card: $3.40</td>
+            </tr>
+            <tr>
+              <td><b>Withdrawal fees</b></td>
+              <td>None</td>
+            </tr>
+            <tr>
+              <td><b>Trading fees</b></td>
+              <td>Maker: 0.40%<br>Taker: 0.40%<br>Instant buy: 3.5%</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="review-box">
+    <div class="box-header">
+      <img src="assets/crypto.com-logo.svg" alt="Product Logo" class="logo">
+      <h3 id="crypto-anchor">Crypto.com</h3>
+      <div class="buttons">
+        <button class="go-to-site">Go to site</button>
+        <button class="read-review">Read review</button>
+      </div>
+    </div>
+    <div class="box-body">
+      <ul>
+        <li><img src="assets/green-tick-icon.svg" alt="Image of a green tick" class="green-tick"> Lorem ipsum dolor sit amet, consectetur adipiscing elit suspice enombre el tusco sit angulus giantele prenombre esulce combre. Lorem ipsum dolor sit amet, consectetur adipiscing elit suspice enombre.</li>
+        <li><img src="assets/green-tick-icon.svg" alt="Image of a green tick" class="green-tick"> Lorem ipsum dolor sit amet albus. Lorem ipsum dolor sit amet, consectetur adipiscing elit suspice enombre el tusco sit angulus giantele prenombre esulce combre.  </li>
+        <li><img src="assets/green-tick-icon.svg" alt="Image of a green tick" class="green-tick"> Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit suspice enombre el tusco sit angulus giantele prenombre esulce combre. Lorem ipsum dolor sit amet.</li>
+        <li><img src="assets/warning-icon.svg" alt="Image of a green tick" class="warning-icon"> Lorem ipsum dolor sit amet prubalis muscar elon nerom crudos dolor. Lorem ipsum dolor sit amet.</li>
+        <li><img src="assets/red-cross-icon.svg" alt="Image of a red cross" class="red-cross"> Lorem ipsum dolor sit amet prubalis muscar elon nerom crudos dolor. Lorem ipsum dolor sit amet.</li>
+        <li><img src="assets/red-cross-icon.svg" alt="Image of a red cross" class="red-cross"></span> Lorem ipsum dolor sit amet.</li>
+      </ul>
+    </div>
+    <div class="accordion-container">
+      <div class="accordion">
+        <div class="accordion-label"><h4>Pros and cons</h4><span class="plus">+</span></div>
+        <div class="accordion-content">
+          <div class="pros-and-cons">
+            <div class="pros">
+              
+              <ul>
+                <li><img src="assets/green-tick-icon.svg" alt="Image of a green tick" class="green-tick"> Lorem ipsum dolor sit amet.</li>
+                <li><img src="assets/green-tick-icon.svg" alt="Image of a green tick" class="green-tick"> Lorem ipsum dolor sit amet.</li>
+                <li><img src="assets/green-tick-icon.svg" alt="Image of a green tick" class="green-tick"> Lorem ipsum dolor sit amet.</li>
+              </ul>
+            </div>
+            <div class="cons">
+              <ul>
+                <li><img src="assets/red-cross-icon.svg" alt="Image of a red cross" class="red-cross"></span> Lorem ipsum dolor sit amet.</li>
+                <li><img src="assets/red-cross-icon.svg" alt="Image of a red cross" class="red-cross"></span> Lorem ipsum dolor sit amet.</li>
+                <li><img src="assets/red-cross-icon.svg" alt="Image of a red cross" class="red-cross"></span> Lorem ipsum dolor sit amet.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion">
+        <div class="accordion-label"><h4>Hands-on review</h4><span class="plus">+</span></div>
+        <div class="accordion-content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur volutpat.</p>
+        </div>
+      </div>
+      <div class="accordion">
+        <div class="accordion-label"><h4>Fees and limits</h4><span class="plus">+</span></div>
+        <div class="accordion-content">
+          <table>
+            <tr>
+              <td><b>Deposit fees</b></td>
+              <td>Bank transfer: None<br> Credit card: $3.40<br> Debit card: $3.40</td>
+            </tr>
+            <tr>
+              <td><b>Withdrawal fees</b></td>
+              <td>None</td>
+            </tr>
+            <tr>
+              <td><b>Trading fees</b></td>
+              <td>Maker: 0.40%<br>Taker: 0.40%<br>Instant buy: 3.5%</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <h3>What is a crypto staking platform?</h3>
+  <br>
+  <p>Crypto staking platforms let you deposit your digital assets with them in exchange for rewards.
+    This reward – or yield – can be generated via staking, lending or through DeFi. Some services may even use a combination of these methods to provide you with yield. 
+    Each method has its own unique risk profile, so it’s important to understand how each works before you decide which platform is right for you. </p>
+<br>
+<br>
+  <h3>What is a DeFi platform?</h3>
+  <br>
+  <p>Decentralized finance involves using blockchain applications to emulate many of the complex financial services found in traditional finance. At a glance, it can seem quite daunting. However, if responsibly used, it can provide a useful tool for passive income. While DeFi yield earning opportunities are vast, one of the most popular is liquidity mining.
+    <br>
+    <br>
+    Liquidity mining involves depositing two or more cryptos into a liquidity pool. This liquidity is made available for users of the platform to perform swaps and trades. By doing this you are acting as a liquidity provider (LP). Traders pay fees to use the pool which are distributed as APY to LPs.
+    <br>
+    <br>
+    Before acting as an LP, it is important to thoroughly understand impermanent loss and the role that this plays in your yield earning potential. </p> 
+    
+<br>
+<br>      
+    <h3 id="risks-anchor">Risks of staking or lending crypto</h3>
+    <br>
+    <ul>
+        <li><img src="assets/warning-icon.svg" alt="Image of a green tick" class="warning-icon"> <b>Counterparty risk.</b> Counterparty risk is the chance that a company may default on its contractual obligations. If a platform experiences a financial default, you may lose some or all of your funds. Counterparty risk can be minimized by choosing to earn yield through staking, rather than lending, or choosing a lender with an over-collateralized model. Look for a platform with an insurance policy to cover such events, or transact on-chain with DeFi.</li>
+        <li><img src="assets/warning-icon.svg" alt="Image of a green tick" class="warning-icon"> <b>Yield rates.</b> APYs vary drastically from platform to platform. If you notice a return rate that is “too good to be true”, take the time to understand how and why that rate is offered. Whether it's a risky project or involves impermanent loss, there is often a reason why such incredible rates are being offered.</li>
+        <li><img src="assets/warning-icon.svg" alt="Image of a green tick" class="warning-icon"> <b>Price volatility.</b> Cryptos are inherently volatile. When planning your staking or lending, take into consideration how your assets might move. If you’re confident in holding your cryptos long term, locked staking or lending might be a suitable way to build up your balance. For higher-risk investments that you might want to sell, a variable-term, early withdrawal option is usually best.</li>
+        <li><img src="assets/warning-icon.svg" alt="Image of a green tick" class="warning-icon"> <b>On-chain earning.</b> Staking and lending directly on-chain requires a solid grasp of how to use non-custodial wallets and make blockchain transfers. If you make a mistake along the way, there is no customer support on offer and all transactions are final. Incorrect usage can result in lost funds.</li>
+        <li><img src="assets/warning-icon.svg" alt="Image of a green tick" class="warning-icon"> <b>Under-collateralized lending.</b> Under-collateralized lending is a high-risk method that counts on the exchange generating profits. If it fails to do so, you’re at risk of losing all of your assets.</li>
+        <li><img src="assets/warning-icon.svg" alt="Image of a green tick" class="warning-icon"> <b>Tax may apply.</b> It may come as a surprise, but crypto transactions made on-chain or through an exchange are generally considered taxable events. Make sure you’re aware of your local tax agency’s treatment of cryptocurrencies, consider tracking your transactions with dedicated crypto tax software and consult a financial adviser if you’re unclear.</li>
+    </ul>
+<br>
+<br>
+    <h3>Verdict</h3>
+    <br>
+    <p>There are lots of ways to put your cryptos to work and potentially earn attractive rewards for doing so.
+      <br>
+      <br>
+      Risk tolerance is the biggest thing to consider when you’re deciding on the best place to stake your crypto. Traders looking for higher risk and higher rewards may be more inclined to delve into the world of DeFi. Those happy to earn consistent and relatively stable returns might opt for on-chain staking or a crypto lending platform with a sound insurance policy and lending model.
+      <br>
+      <br>
+      While there is no perfect way to earn yield on your crypto, proper planning and research can help you build a solid investment plan, take confidence in your strategy and let your assets do the work for you. </p> 
+
+<br>
+<br>
+
+    <div class="author-box">
+      <div class="author-image">
+        <img src="assets/author-headshot.png" alt="Headshot of author" />
+        <h4>Author: James Edwards</h4>
+        <div class="social-icons">
+          <a href="#"><img src="assets/linkedin-icon.png" alt="LinkedIn" /></a>
+          <a href="#"><img src="assets/twitter-icon.png" alt="Twitter" /></a>
+          <a href="#"><img src="assets/gmail-icon.png" alt="Gmail" /></a>
+        </div>
+      </div>
+      <div class="author-text">
+        <p>
+          James Edwards is the global cryptocurrency editor at Finder. His expertise has seen him called on to report at events such as TechCrunch Disrupt, CoinDesk Consensus and IBM Think and has coordinated a vast number of high-profile interviews with the industry's brightest minds.
+    He is a regular contributor to Nasdaq, The Street and is frequently called upon for market commentary in Australia and abroad.
+        </p>
+      </div>
+    </div>
+
+  </section>
+
+    <aside class="right-sidebar">
+      <div class="ad-container"></div>
+      <div class="ad-container"></div>
+    </aside>
+
+  </main>
+
+  <footer>
+    <nav>
+      <hr> 
+      <ul class="footer-nav">
+        <li><a href="#">DOES ANYONE</a></li>
+        <li><a href="#">EVER REALLY</a></li>
+        <li><a href="#">USE</a></li>
+        <li><a href="#">THE</a></li>
+        <li><a href="#">FOOTER NAV?</a></li>    
+      </ul>  
+      </nav>
+  </footer> 
+</body>
+</html>
+
