@@ -89,8 +89,15 @@
     cursor: pointer;
     color: rgba(255, 255, 255, 0.8);
     font-size: 24px;
+
   }
   
+  #js-navbar-toggle {
+    height: 50px;
+  }
+  
+
+
   #chkToggle {
     display: none;
   }
@@ -98,7 +105,7 @@
   #chkToggle:checked + ul.main-nav {
     display: block;
   }
-  
+
   @media screen and (min-width: 768px) {
     .navbar {
       display: flex;
@@ -578,7 +585,7 @@ tr:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-right: 1px solid #ccc;
+  /* border-right: 1px solid #ccc; */
   box-sizing: border-box;
   padding: 10px;
   max-height: 250px
@@ -618,6 +625,7 @@ tr:hover {
   /* max-height: 250px; */
 }
 
+/* 
 @media screen and (max-width: 780px) {
   .author-box
   {
@@ -626,7 +634,7 @@ tr:hover {
   .author-image {
     display: none;
   }
-  }
+  } */
 
 /* ----- Author box ---- */
 
