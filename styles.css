@@ -2,471 +2,19 @@
 /*Global stuff*/
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-size: 16px;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f6f8;
-    color: #333;
-    margin: 0;
-    padding: 0;
-    
-  }
-  
-  .box-body li,
-  .pros-and-cons li {
-    padding-bottom: 10px;
-  }
-
-  body p {
-    font-size: 16px;
-    line-height: 1.6;
-  }
-
-  body ul {
-    line-height: 1.6;
-    padding-bottom: 10px;
-  }
-
-  /*It's a Tuesday night navbar party*/
-  
-  .navbar {
-    font-size: 16px;
-  
-    background: #ffc184;; /* fallback for old browsers */
-    background: -webkit-linear-gradient(
-      to left,
-      #ffc184,
-      #f57c00
-    ); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(
-      to left,
-      #ffc184,
-      #f57c00
-    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    padding-bottom: 10px;
-  }
-
-.navbar ul {
-  padding-bottom: 0px;
-}
-
-  .main-nav {
-    list-style-type: none;
-    display: none;
-  }
-  
-  .nav-links,
-  .logo {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-  }
-  
-  .main-nav li {
-    text-align: center;
-    /* align-items: center;
-    justify-content: center; */
-    margin: 15px auto;
-  }
-  
-  .logo {
-    display: inline-block;
-    font-size: 22px;
-    margin-top: 10px;
-    margin-left: 20px;
-  }
-  
-  .navbar-toggle {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    cursor: pointer;
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 24px;
-
-  }
-  
-  #js-navbar-toggle {
-    height: 50px;
-  }
-  
-
-
-  #chkToggle {
-    display: none;
-  }
-  
-  #chkToggle:checked + ul.main-nav {
-    display: block;
-  }
-
-  @media screen and (min-width: 768px) {
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      padding-bottom: 0;
-      height: 70px;
-      align-items: center;
-    }
-  
-    #chkToggle:checked + ul.main-nav {
-      display: flex;
-    }
-  
-    .main-nav {
-      display: flex;
-      margin-right: 30px;
-      flex-direction: row;
-      justify-content: flex-end;
-    }
-  
-    .main-nav li {
-      margin: 0;
-    }
-  
-    .nav-links {
-      margin-left: 40px;
-    }
-  
-    .logo {
-      margin-top: 0;
-    }
-  
-    .navbar-toggle {
-      display: none;
-    }
-  
-    .logo:hover,
-    .nav-links:hover {
-      color: rgba(255, 255, 255, 1);
-    }
-  }
-  
-
-@media screen and (max-width: 780px) {
-    #nav-menu {
-        display: none;
-    }
-
-    .hamburger-menu {
-        display: flex;
-    }
-}
-
-  @media screen and (max-width: 420px) {
-    #nav-menu {
-      font-size: 60%;
-    }
-  }
-
-  /* This is a hacky solution right now. Not sure why space  */
-  /* evenly or space between didnt work.I suspect its a parent/child issue between grid/flex */
-  #nav-menu li {
-  margin: 0 10px;
-  }
-
- /*  Need to add display/add boxes on left and right grids. Need to update html */
-  .masthead {
-    display: grid;
-    height: 200px;
-    background-color: #fff;
-    width: 100%;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-top: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 20px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    }
-  
-  .masthead-content {
-    grid-column-start: 2;
-    display: flex;
-    flex-direction: column;
-    /* text-align: justify;*/
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .masthead-content h1 {
-    margin-bottom: 20px; 
-    font-size: 200%;
-  }
-
-  .masthead-content h2 {
-    font-size: 100%;
-  }
- 
-  .masthead-sidebar-left,
-  .masthead-sidebar-right {
-    background-color: #e0e0e0;;
-    padding: 20px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    width: 80%;
-    height: 80%;
-    margin: 20px;
-  }
-  
-  .masthead-sidebar-left {
-    grid-column-start: 1;
-    grid-row-start: 1;
-  }
-
-  .masthead-sidebar-right {
-    grid-column-start: 3;
-    grid-row-start: 1;
-  }
-
-  /* .masthead-sidebar-left,
-  .masthead-sidebar-right {
-    background-color: #e0e0e0;
-    width: 80%;
-    height: 80%;
-    margin: 20px;
-  }    */
-
-  @media screen and (max-width: 780px) {
-    .masthead {
-      grid-template-columns: 1fr;
-    }
-  }
- 
-  @media screen and (max-width: 780px) {
-    .masthead-content {
-      display: flex;
-      flex-direction: column;
-    }
-  }
-  @media screen and (max-width: 420px) {
-    .masthead-content h1 {
-      font-size: 140%;
-    }
-  }
-
-  @media screen and (max-width: 420px) {
-    .masthead-content h2 {
-      font-size: 100%;
-    }
-  }
-
-  @media screen and (max-width: 780px) {
-    .masthead-sidebar-left,
-    .masthead-sidebar-right,
-    .masthead-ad-container-left,
-    .masthead-ad-container-right,
-    .left-sidebar,
-    .right-sidebar {
-      display: none;
-    }
-    }
-
-/* ---- Body container with grid settings ------ */
-/* ---- Body container with grid settings ------ */
-
-  .main-grid {
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  /* ----Sidebars!----- */
-  /* ----Sidebars!----- */
-
-  .left-sidebar {
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    height: 400px;
-    /* overflow-y: scroll; */
-    /* height: auto; */
-    /* max-height: fit-content; <--- why isnt this working? Its the ideal state  */
-  }
-  
-  @media screen and (max-width: 1048px) {
-    .left-sidebar {
-      overflow-y: scroll;
-    }
-    }
-
-  .left-sidebar a {
-    text-decoration: none;
-    color: #333;
-  }
-  
-  .left-sidebar a:hover {
-    color: #f57c00;
-  }
-  
-  .right-sidebar {
-    display: flex;
-    flex-direction: column;
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    align-items: center;
-    max-height: 1200px;
-  }
-  
-  .ad-container {
-    background-color: #e0e0e0;
-    width: 93%;
-    height: 600px;
-    /* margin: 0 auto; */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    margin-bottom: 100px;
-  }
-
-  @media screen and (max-width: 780px) {
-    .left-sidebar,
-    .right-sidebar {
-      display: none;
-    }
-    }
-
-  /* ------- Calculator  -----------*/
-  /* ------- Calculator  -----------*/
-
-  .calculator {
-    background-color: white;
-    padding: 20px;
-    max-width: 400px;
-    margin: 50px auto;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .calculator h3 {
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  
-  .calculator label {
-    display: inline-block;
-    width: 100px;
-  }
-  
-  .calculator button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
-  }
-  
-  .calculator button:hover {
-    background-color: #45a049;
-  }
-  
-
-  /* ------- Review container -----------*/
-  /* ------- Review container -----------*/
-  /* .review-box {
-    margin-bottom: 20px;
-  } */
-  
-  .review-box {
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 20px;
-  border-radius: 5px;
-  background-color: #fff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   font-size: 16px;
 }
 
-.box-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 20px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #e0e0e0;
-}
-
-.logo {
-  width: 60px;
-  height: 60px;
-}
-
-h3 {
-  font-size: 20px;
-  font-weight: 600;
-  color: #1a1a1a;
-}
-
-.buttons {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-button {
-    border: none;
-    font-size: 14px;
-    padding: 5px 10px;
-    margin-bottom: 5px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-weight: 600;
-    transition: background-color 0.2s, color 0.2s;
-    width: 110px; /* Add fixed width */
-    text-align: center; /* Center the text */
-  }
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+  margin: 0;
+  padding: 0;
   
-  .go-to-site {
-    background-color: #f57c00;
-    color: white;
-  }
-  
-  .go-to-site:hover {
-    background-color: #e8710a;
-  }
-  
-  .read-review {
-    background-color: white;
-    color: #f57c00;
-    border: 1px solid #f57c00;
-  }
-  
-  .read-review:hover {
-    background-color: #f5f5f5;
-  }
-
-.box-body {
-  margin-bottom: 20px; 
-}
-
-.box-body p,
-.box-body ul {
-  line-height: 1.6;
 }
 
 .box-body li,
@@ -474,167 +22,615 @@ button {
   padding-bottom: 10px;
 }
 
-ul {
-  list-style-type: none;
-  font-size: 14px;
+body p {
+  font-size: 16px;
   line-height: 1.6;
+}
+
+body ul {
+  line-height: 1.6;
+  padding-bottom: 10px;
+}
+
+/*It's a Tuesday night navbar party*/
+
+.navbar {
+  font-size: 16px;
+
+  background: #ffc184;; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #ffc184,
+    #f57c00
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #ffc184,
+    #f57c00
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding-bottom: 10px;
+}
+
+.navbar ul {
+padding-bottom: 0px;
+}
+
+.main-nav {
+  list-style-type: none;
+  display: none;
+}
+
+.nav-links,
+.logo {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+.main-nav li {
+  text-align: center;
+  /* align-items: center;
+  justify-content: center; */
+  margin: 15px auto;
+}
+
+.logo {
+  display: inline-block;
+  font-size: 22px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.navbar-toggle {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 24px;
+
+}
+
+#js-navbar-toggle {
+  height: 50px;
+}
+
+
+
+#chkToggle {
+  display: none;
+}
+
+#chkToggle:checked + ul.main-nav {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0;
+    height: 70px;
+    align-items: center;
+  }
+
+  #chkToggle:checked + ul.main-nav {
+    display: flex;
+  }
+
+  .main-nav {
+    display: flex;
+    margin-right: 30px;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .main-nav li {
+    margin: 0;
+  }
+
+  .nav-links {
+    margin-left: 40px;
+  }
+
+  .logo {
+    margin-top: 0;
+  }
+
+  .navbar-toggle {
+    display: none;
+  }
+
+  .logo:hover,
+  .nav-links:hover {
+    color: rgba(255, 255, 255, 1);
+  }
+}
+
+
+@media screen and (max-width: 780px) {
+  #nav-menu {
+      display: none;
+  }
+
+  .hamburger-menu {
+      display: flex;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  #nav-menu {
+    font-size: 60%;
+  }
+}
+
+/* This is a hacky solution right now. Not sure why space  */
+/* evenly or space between didnt work.I suspect its a parent/child issue between grid/flex */
+#nav-menu li {
+margin: 0 10px;
+}
+
+/*  Need to add display/add boxes on left and right grids. Need to update html */
+.masthead {
+  display: grid;
+  height: 200px;
+  background-color: #fff;
+  width: 100%;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  }
+
+.masthead-content {
+  grid-column-start: 2;
+  display: flex;
+  flex-direction: column;
+  /* text-align: justify;*/
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.masthead-content h1 {
+  margin-bottom: 20px; 
+  font-size: 200%;
+}
+
+.masthead-content h2 {
+  font-size: 100%;
+}
+
+.masthead-sidebar-left,
+.masthead-sidebar-right {
+  background-color: #e0e0e0;;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  width: 80%;
+  height: 80%;
+  margin: 20px;
+}
+
+.masthead-sidebar-left {
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+
+.masthead-sidebar-right {
+  grid-column-start: 3;
+  grid-row-start: 1;
+}
+
+/* .masthead-sidebar-left,
+.masthead-sidebar-right {
+  background-color: #e0e0e0;
+  width: 80%;
+  height: 80%;
+  margin: 20px;
+}    */
+
+@media screen and (max-width: 780px) {
+  .masthead {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .masthead-content {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 420px) {
+  .masthead-content h1 {
+    font-size: 140%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .masthead-content h2 {
+    font-size: 100%;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .masthead-sidebar-left,
+  .masthead-sidebar-right,
+  .masthead-ad-container-left,
+  .masthead-ad-container-right,
+  .left-sidebar,
+  .right-sidebar {
+    display: none;
+  }
+  }
+
+/* ---- Body container with grid settings ------ */
+/* ---- Body container with grid settings ------ */
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ----Sidebars!----- */
+/* ----Sidebars!----- */
+
+.left-sidebar {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 400px;
+  /* overflow-y: scroll; */
+  /* height: auto; */
+  /* max-height: fit-content; <--- why isnt this working? Its the ideal state  */
+}
+
+@media screen and (max-width: 1048px) {
+  .left-sidebar {
+    overflow-y: scroll;
+  }
+  }
+
+.left-sidebar a {
+  text-decoration: none;
+  color: #333;
+}
+
+.left-sidebar a:hover {
+  color: #f57c00;
+}
+
+.right-sidebar {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  align-items: center;
+  max-height: 1200px;
+}
+
+.ad-container {
+  background-color: #e0e0e0;
+  width: 93%;
+  height: 600px;
+  /* margin: 0 auto; */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin-bottom: 100px;
+}
+
+@media screen and (max-width: 780px) {
+  .left-sidebar,
+  .right-sidebar {
+    display: none;
+  }
+  }
+
+/* ------- Calculator  -----------*/
+/* ------- Calculator  -----------*/
+
+.calculator {
+  background-color: white;
+  padding: 20px;
+  max-width: 400px;
+  margin: 50px auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.calculator h3 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.calculator label {
+  display: inline-block;
+  width: 100px;
+}
+
+.calculator button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.calculator button:hover {
+  background-color: #45a049;
+}
+
+
+/* ------- Review container -----------*/
+/* ------- Review container -----------*/
+/* .review-box {
+  margin-bottom: 20px;
+} */
+
+.review-box {
+max-width: 800px;
+margin: 40px auto;
+padding: 20px;
+border-radius: 5px;
+background-color: #fff;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+display: flex;
+flex-direction: column;
+font-size: 16px;
+}
+
+.box-header {
+display: flex;
+align-items: center;
+justify-content: space-between;
+margin-bottom: 20px;
+padding-bottom: 10px;
+border-bottom: 1px solid #e0e0e0;
+}
+
+.logo {
+width: 60px;
+height: 60px;
+}
+
+h3 {
+font-size: 20px;
+font-weight: 600;
+color: #1a1a1a;
+}
+
+.buttons {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+}
+
+button {
+  border: none;
+  font-size: 14px;
+  padding: 5px 10px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: 600;
+  width: 110px; 
+  text-align: center; 
+}
+
+.go-to-site {
+  background-color: #f57c00;
+  color: white;
+}
+
+.go-to-site:hover {
+  background-color: #e8710a;
+}
+
+.read-review {
+  background-color: white;
+  color: #f57c00;
+  border: 1px solid #f57c00;
+}
+
+.read-review:hover {
+  background-color: #f5f5f5;
+}
+
+.box-body {
+margin-bottom: 20px; 
+}
+
+.box-body p,
+.box-body ul {
+line-height: 1.6;
+}
+
+.box-body li,
+.pros-and-cons li {
+padding-bottom: 10px;
+}
+
+ul {
+list-style-type: none;
+font-size: 14px;
+line-height: 1.6;
 }
 
 .green-tick,
 .red-cross,
 .warning-icon
- {
-  height: 15px;
-  padding-right: 5px;
+{
+height: 15px;
+padding-right: 5px;
 }
 
 .accordion-container {
-  margin-bottom: 20px;
+margin-bottom: 20px;
 }
 
 .accordion {
-  margin-bottom: 5px;
+margin-bottom: 5px;
 }
 
 .accordion-label {
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  font-size: 14px;
-  /* font-weight: 600; */
-  color: #333;
-  padding: 5px 0;
+cursor: pointer;
+display: flex;
+justify-content: space-between;
+font-size: 14px;
+color: #333;
+padding: 5px 0;
 }
 
 .plus {
-  font-weight: bold;
-  color: #333;
-  font-size: 20px;
+font-weight: bold;
+color: #333;
+font-size: 20px;
 }
 
 .accordion-content {
-  display: none;
+display: none;
 }
 
 .accordion-content p {
-  margin-top: 10px;
-  font-size: 14px;
-  line-height: 1.6;
+margin-top: 10px;
+font-size: 14px;
+line-height: 1.6;
 }
 
 .pros-and-cons {
-  display: flex;
+display: flex;
 }
 
 .pros,
 .cons {
-  flex: 1;
+flex: 1;
 }
 
 table {
-  border-collapse: collapse;
-  width: 100%;
-  font-family: Arial, sans-serif;
-  color: #333;
-  font-size: 16px;
-  line-height: 2;
+border-collapse: collapse;
+width: 100%;
+font-family: Arial, sans-serif;
+color: #333;
+font-size: 16px;
+line-height: 2;
 }
 
 td, th {
-  border: 1px solid #e0e0e0;
-  padding: 10px;
+border: 1px solid #e0e0e0;
+padding: 10px;
 }
 
 tr:hover {
-  background-color: #f5f5f5;
+background-color: #f5f5f5;
 }
 
 .accordion-content p {
-  font-size: 16px;
+font-size: 16px;
 }
 
 @media screen and (max-width: 780px) {
-  .container {
-    flex-direction: column;
-  }
+.container {
+  flex-direction: column;
+}
 }
 
 @media screen and (max-width: 780px) {
-  .main-grid {
-    grid-template-columns: 1fr;
-  }
+.main-grid {
+  grid-template-columns: 1fr;
+}
 }
 
 /* ----- Author box ---- */
 
 .author-box {
-  display: flex;
-  width: 100%;
-  /* height: 250px; */
-  background-color: #ffc184;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+display: flex;
+width: 100%;
+background-color: #ffc184;
+border: 1px solid #ccc;
+border-radius: 5px;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .author-image {
-  position: relative;
-  width: calc(100% / 3);
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  /* border-right: 1px solid #ccc; */
-  box-sizing: border-box;
-  padding: 10px;
-  max-height: 250px
+position: relative;
+width: calc(100% / 3);
+height: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+box-sizing: border-box;
+padding: 10px;
+max-height: 250px
 }
 
 .author-image img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
+width: 100px;
+height: 100px;
+border-radius: 50%;
+object-fit: cover;
 }
 
 .author-image h4 {
-  margin-top: 10px;
+margin-top: 10px;
 }
 
 .social-icons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  box-sizing: border-box;
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 10px;
+box-sizing: border-box;
 }
 
 .social-icons img {
-  width: 20px;
-  height: 20px;
+width: 20px;
+height: 20px;
 }
 
 .author-text {
-  width: calc(100% * 2 / 3);
-  /* height: 100%; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  /* max-height: 250px; */
+width: calc(100% * 2 / 3);
+/* height: 100%; */
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 20px;
+/* max-height: 250px; */
 }
 
 /* 
 @media screen and (max-width: 780px) {
-  .author-box
-  {
-    display: none;
-  }
-  .author-image {
-    display: none;
-  }
-  } */
+.author-box
+{
+  display: none;
+}
+.author-image {
+  display: none;
+}
+} */
 
 /* ----- Author box ---- */
 
@@ -642,60 +638,56 @@ tr:hover {
 /* ------- Footer section -------- */
 
 footer {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
+display: flex;
+flex-direction: row;
+align-items: center;
+align-content: center;
+justify-content: center;
 }
 
 footer ul {
-  list-style: none; 
-  display: flex;
-  justify-content: space-evenly;
+list-style: none; 
+display: flex;
+justify-content: space-evenly;
 }
 
 footer li {
-  display: inline-flex; 
-  margin-right: 30px;
-  /* padding-left: 60px;
-  padding-right: 60px; */
+display: inline-flex; 
+margin-right: 30px;
+/* padding-left: 60px;
+padding-right: 60px; */
 }
 
 @media screen and (max-width: 420px) {
-  footer li {
-    font-size: 60%;
-    justify-content: space-between;
-  }
+footer li {
+  font-size: 60%;
+  justify-content: space-between;
+}
 }
 
 /* Universal media control setttings - dunno if these should stay down here or go top of doc? */
-  @media screen and (max-width: 420px) {
-    .main-grid {
-      padding: 5px;
-    }  
+@media screen and (max-width: 420px) {
+  .main-grid {
+    padding: 5px;
+  }  
 
-  .left-sidebar {
-    display: none;
-    /* position: fixed;
-    top: 0;
-    left: 0;
-    height: 10%;
-    width: 100%;
-    z-index: 100;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
-  }
+.left-sidebar {
+  display: none;
+  /* position: fixed;
+  top: 0;
+  left: 0;
+  height: 10%;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
+}
 
-/* Need to change the calc used here, as I clearly couldnt have done that myself. */
-  .content {
-    margin-top: calc(10% + 20px);
-  }
- 
-  .right-sidebar {
-    display: none;
-  }
+
+.right-sidebar {
+  display: none;
+}
 }
